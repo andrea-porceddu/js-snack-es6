@@ -51,6 +51,6 @@ for (let k = 0; k < footballClubs3.length; k++) {
 }
 
 // stampa
-for (var g = 0; g < footballClubs3.length; g++) {
+for (let g = 0; g < footballClubs3.length; g++) {
 	console.log(`Nome squadra: ${footballClubs3[g].name} - Falli subiti: ${footballClubs3[g].fs}`)
 }
