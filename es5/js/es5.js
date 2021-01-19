@@ -1,7 +1,9 @@
-// 1. ES5
-// Ogni oggetto descriverà una bici da corsa con le seguenti proprietà: nome e peso.
-// Stampare a schermo la bici con peso minore utilizzando destructuring e template literal (backtick `)
+/* 1. ES5
+Ogni oggetto descriverà una bici da corsa con le seguenti proprietà: nome e peso.
+Stampare a schermo la bici con peso minore utilizzando destructuring e template literal (backtick `)*/
 
+/* creo array negozio di oggetti
+ogni oggetto ha proprietà nome e peso */
 var negozio = [
 	{
 		'nome': 'bici01', 
@@ -14,6 +16,8 @@ var negozio = [
 ]
 // console.log(negozio.length);
 
+/* creo variabile inizializzata a 0 che mi servirà come variabile temporanea a cui assegnare il valore 
+della key peso di ogni oggetto. pesoMin assume il valore minore confrontando il valore di peso di ogni oggetto */
 var pesoMin = 0
 for (var i = 0; i < negozio.length; i++) {
 	for (var j = 0; j < negozio.length; j++) {
@@ -24,10 +28,8 @@ for (var i = 0; i < negozio.length; i++) {
 	}
 }
 // console.log(pesoMin)
+// stampa utilizzando backtick e template literal
 console.log(`La bici con peso minore ha un peso di ${pesoMin} kg`)
-
-// destructuring
-
 
 /* --- Ottavio correction --- io avevo messo apici su valori peso
 // salvo l'oggetto in posizione 0 dell'array
@@ -40,17 +42,16 @@ for (var i = 1; i < negozio.length; i++) {
 		bici = negozio[i]
 	}
 }
+console.log(bici) */
 
-console.log(bici)
-*/
+/* 2. ES5
+Ogni squadra avrà diverse proprietà: nome, punti fatti, falli subiti.
+Nome sarà l’unica proprietà da compilare, le altre saranno tutte settate a 0.
+Generare numeri random al posto degli 0 nelle proprietà: Punti fatti e falli subiti
+Infine usando la destrutturazione creiamo un nuovo array i cui elementi contengono solo 
+nomi e falli subiti e stampiamo tutto in console. */
 
-// 2. ES5
-// Ogni squadra avrà diverse proprietà: nome, punti fatti, falli subiti.
-// Nome sarà l’unica proprietà da compilare, le altre saranno tutte settate a 0.
-// Generare numeri random al posto degli 0 nelle proprietà: Punti fatti e falli subiti
-// Infine usando la destrutturazione creiamo un nuovo array i cui elementi contengono solo nomi e falli subiti e stampiamo tutto in console.
-
-// array di oggetti squadre
+// array footballClubs di oggetti
 var footballClubs = [
 	{'name': 'AC Milan', 'pt': '0', 'fs': '0'},
 	{'name': 'Inter', 'pt': '0', 'fs': '0'},
@@ -65,21 +66,24 @@ function randomNum(min, max) {
 	return Math.floor(Math.random() * (max + 1 - min) + min)
 }
 
-// assegno a ogni oggetto di array squadre un numero random per keys pt e fs
+/* scorro l'array di oggetti footballClubs e per ogni oggetto salvo in una variabile ogni singolo oggetto 
+dell'array footballClubs e per ognuno di essi assegno alle keys pt e fs numeri random come valore */
 for (var y = 0; y < footballClubs.length; y++) {
 	var thisClub = footballClubs[y]
 	thisClub.pt = randomNum(1, 200)
 	thisClub.fs = randomNum(1, 200)
 }
 
-// creo array i cui elementi sono i nomi e i falli subiti di ogni oggetto di array footballClubs
+/* creo NUOVO array di oggetti e per la lunghezza dell'array di oggetti footballClubs salvo in una variabile 
+ogni oggetto di footballClubs e per ognuno di essi pusho nel nuovo array il nome e i falli subiti di ogni 
+oggetto dell'array footballClubs */
 var arr = []
 for (var z = 0; z < footballClubs.length; z++) {
 	var thisClub2 = footballClubs[z]
 	arr.push({'name': thisClub2.name}, {'fs': thisClub2.fs})
 }
 
-// stampa
+// stampa utilizzando backtick e template literal
 for (var e = 0; e < footballClubs.length; e++) {
 	console.log(`Nome squadra: ${footballClubs[e].name} - Falli subiti: ${footballClubs[e].fs}`)
 }

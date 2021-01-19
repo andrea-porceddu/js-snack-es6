@@ -17,10 +17,10 @@ for (let i = 0; i < negozio2.length; i++) {
 	}
 }
 // console.log(pesoMin2)
+// stampa
 console.log(`La bici con peso minore ha un peso di ${pesoMin2} kg`)
 
 // 2. ES6
-
 let footballClubs3 = [
 	{'name': 'Atalanta', 'pt': '0', 'fs': '0'},
 	{'name': 'SS Lazio', 'pt': '0', 'fs': '0'},
@@ -30,7 +30,6 @@ let footballClubs3 = [
 ]
 // console.log(footballClubs3)
 
-// funzione genera numero random
 function randomNum(min, max) {
 	return Math.floor(Math.random() * (max + 1 - min) + min)
 }
@@ -45,9 +44,7 @@ for (let x = 0; x < footballClubs3.length; x++) {
 let newArr = []
 for (let k = 0; k < footballClubs3.length; k++) {
 	let thisClub3 = footballClubs3[k]
-	newArr.push(
-		{'name': thisClub3.name}, {'fs': thisClub3.fs}
-	)
+	newArr.push({'name': thisClub3.name}, {'fs': thisClub3.fs})
 }
 
 // stampa
