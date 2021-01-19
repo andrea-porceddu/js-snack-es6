@@ -99,7 +99,11 @@ var arr = []
 for (var z = 0; z < footballClubs.length; z++) {
 	var thisClub2 = footballClubs[z]
 	arr.push({'name': thisClub2.name}, {'fs': thisClub2.fs})
-	console.log(`Nome squadra: ${thisClub2.name} - Falli subiti: ${thisClub2.fs}`)
+}
+
+// stampa
+for (var e = 0; e < footballClubs.length; e++) {
+	console.log(`Nome squadra: ${footballClubs[e].name} - Falli subiti: ${footballClubs[e].fs}`)
 }
 
 
@@ -127,5 +131,9 @@ for (let k = 0; k < footballClubs3.length; k++) {
 	newArr.push(
 		{'name': thisClub3.name}, {'fs': thisClub3.fs}
 	)
-	console.log(`Nome squadra: ${thisClub3.name} - Falli subiti: ${thisClub3.fs}`)
+}
+
+// stampa
+for (var g = 0; g < footballClubs3.length; g++) {
+	console.log(`Nome squadra: ${footballClubs3[g].name} - Falli subiti: ${footballClubs3[g].fs}`)
 }
