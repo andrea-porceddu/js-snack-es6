@@ -3,6 +3,7 @@ Si scriva una funzione che accetti tre argomenti, un array e due numeri (A più 
 La funzione ritornerà un nuovo array con i valori che hanno la posizione compresa tra i due numeri */
 
 /*
+
 function arrayOfUniqueNumbers(min, max, length) {
 	var arr = []
 	while(arr.length < length) {
@@ -14,9 +15,6 @@ function arrayOfUniqueNumbers(min, max, length) {
 	return arr
 }
 
-var arr = arrayOfUniqueNumbers(1, 100, 20)
-console.log(arr)
-
 function arrayMinPosMaxPos(arr, minPos, maxPos) { // uman positions not machine
 	var newArr = []
 	for (var i = minPos - 1; i < maxPos; i++) {
@@ -25,12 +23,15 @@ function arrayMinPosMaxPos(arr, minPos, maxPos) { // uman positions not machine
 	return newArr
 }
 
+var arr = arrayOfUniqueNumbers(1, 100, 20)
+console.log(arr)
+
 var newArr = arrayMinPosMaxPos(arr, 4, 8)
 console.log(newArr)
 */
 
 /*
-// after in classroom correction by Alftedo/Enrico
+// after in classroom correction by Alfredo/Enrico
 
 function arrayMinPosMaxPos2(arr, minPos, maxPos) {
   var newArr = []
@@ -50,6 +51,53 @@ var maxNum = parseInt(prompt('Inserisci posizione massima'))
 
 var newArr2 = arrayMinPosMaxPos2(arr2, minNum, maxNum)
 console.log(newArr2)
+
 */
 
-// array.filter()
+/*
+
+// forEach
+var arr = ['Mario', 'Ennio', 'Annio', 'Maccio', 'Herbert', 'Mariottide', 'Oscar', 'Billy', 'Ektor', 'Piero',]
+console.log('Array di stringhe: ' + arr.join(' - '))
+
+var minPos = parseInt(prompt('Inserisci posizione minima'))
+var maxPos = parseInt(prompt('Inserisci posizione massima'))
+var newArr = []
+
+arr.forEach(function(el, i) {
+  if (i >= minPos - 1 && i <= maxPos - 1) { // uman position instead machine position
+    newArr.push(el)
+  }
+});
+console.log('forEach con min e max position: ' + newArr.join(' - '))
+
+*/
+
+/*
+
+// arr.filter()
+var arr = ['Mario', 'Ennio', 'Annio', 'Maccio', 'Herbert', 'Mariottide', 'Oscar', 'Billy', 'Ektor', 'Piero',]
+console.log('Array di stringhe: ' + arr.join(' - '))
+
+var minPosition = parseInt(prompt('Inserisci posizione minima'))
+var maxPosition = parseInt(prompt('Inserisci posizione massima'))
+var newArr2 = []
+
+newArr2 = arr.filter(function(el, i) {
+  return i >= minPosition - 1 && i <= maxPosition - 1
+})
+console.log('arr.filter(): ' + newArr2.join(' - '))
+
+*/
+
+// arrow function
+var arr = ['Mario', 'Ennio', 'Annio', 'Maccio', 'Herbert', 'Mariottide', 'Oscar', 'Billy', 'Ektor', 'Piero',]
+console.log('Array di stringhe: ' + arr.join(' - '))
+
+var minPosition = parseInt(prompt('Inserisci posizione minima'))
+var maxPosition = parseInt(prompt('Inserisci posizione massima'))
+var newArr2 = []
+
+newArr2 = arr.filter((el, i) => i >= minPosition - 1 && i <= maxPosition - 1)
+
+console.log('arr.filter() with arrow function: ' + newArr2.join(' - '))
