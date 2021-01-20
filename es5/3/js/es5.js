@@ -16,9 +16,9 @@ function arrayOfUniqueNumbers(min, max, length) {
 var arr = arrayOfUniqueNumbers(1, 100, 20)
 console.log(arr)
 
-function arrayMinPosMaxPos(arr, minPos, maxPos) {
+function arrayMinPosMaxPos(arr, minPos, maxPos) { // uman positions not machine
 	var newArr = []
-	for (var i = minPos; i <= maxPos; i++) {
+	for (var i = minPos - 1; i < maxPos; i++) {
 		newArr.push(arr[i])
 	}
 	return newArr
