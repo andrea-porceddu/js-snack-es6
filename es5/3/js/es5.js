@@ -2,6 +2,7 @@
 Si scriva una funzione che accetti tre argomenti, un array e due numeri (A più piccolo di B).
 La funzione ritornerà un nuovo array con i valori che hanno la posizione compresa tra i due numeri */
 
+/*
 function arrayOfUniqueNumbers(min, max, length) {
 	var arr = []
 	while(arr.length < length) {
@@ -26,8 +27,11 @@ function arrayMinPosMaxPos(arr, minPos, maxPos) { // uman positions not machine
 
 var newArr = arrayMinPosMaxPos(arr, 4, 8)
 console.log(newArr)
+*/
 
+/*
 // after in classroom correction by Alftedo/Enrico
+
 function arrayMinPosMaxPos2(arr, minPos, maxPos) {
   var newArr = []
   for (var j = 0; j < arr.length; j++) {
@@ -46,3 +50,6 @@ var maxNum = parseInt(prompt('Inserisci posizione massima'))
 
 var newArr2 = arrayMinPosMaxPos2(arr2, minNum, maxNum)
 console.log(newArr2)
+*/
+
+// array.filter()
