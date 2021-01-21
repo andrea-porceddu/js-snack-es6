@@ -67,7 +67,7 @@ arr.forEach(function(el, i) {
     newArr.push(el)
   }
 });
-console.log('forEach con min e max position: ' + newArr.join(' - '))
+console.log(`forEach: Valori da posizione (umana) minima ${minPos} e massima ${maxPos}: ${newArr.join(' - ')}`);
 
 */
 
@@ -84,7 +84,7 @@ let newArr2 = []
 newArr2 = arr.filter(function(el, i) {
   return i >= minPosition - 1 && i <= maxPosition - 1
 })
-console.log('arr.filter(): ' + newArr2.join(' - '))
+console.log(`arr.filter(): Valori da posizione (umana) minima ${minPosition} e massima ${maxPosition}: ${newArr2.join(' - ')}`);
 
 */
 
@@ -98,4 +98,4 @@ let newArr2 = []
 
 newArr2 = arr.filter((el, i) => i >= minPosition - 1 && i <= maxPosition - 1)
 
-console.log('arr.filter() with arrow function: ' + newArr2.join(' - '))
+console.log(`arr.filter(): Valori da posizione (umana) minima ${minPosition} e massima ${maxPosition}: ${newArr2.join(' - ')}`);
